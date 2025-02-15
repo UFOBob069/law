@@ -48,14 +48,14 @@ export default function SaveToPdfButton({ mealPlan }: SaveToPdfButtonProps) {
         // Instructions
         pdf.text('Instructions:', 15, yOffset);
         yOffset += 5;
-        meal.instructions.forEach((step, i) => {
-          const lines = pdf.splitTextToSize(`${i + 1}. ${step}`, 170);
-          lines.forEach(line => {
+        meal.instructions.forEach((step: string, i: number) => {
+          const lines: string[] = pdf.splitTextToSize(`${i + 1}. ${step}`, 170);
+          lines.forEach((line: string) => {
             if (yOffset > 280) {
               pdf.addPage();
               yOffset = 10;
             }
-            pdf.text(line as string, 20, yOffset);
+            pdf.text(line, 20, yOffset);
             yOffset += 5;
           });
         });
