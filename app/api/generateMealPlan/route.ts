@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     console.log('Received form data:', formData);
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4-turbo',
       messages: [
         {
           role: 'system',
