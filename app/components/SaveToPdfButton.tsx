@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import html2canvas from 'html2canvas';
 import { MealPlanResponse } from '../types';
-import dynamic from 'next/dynamic';
 
 interface SaveToPdfButtonProps {
   mealPlan: MealPlanResponse;
