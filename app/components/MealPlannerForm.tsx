@@ -2,7 +2,6 @@
 
 import { useState, useRef } from 'react';
 import { CookingMethod, DietaryPreference, MealPlanFormData, MealPlanResponse } from '../types';
-import Image from 'next/image';
 import IngredientRain from './IngredientRain';
 import { RAIN_DURATION } from '../constants';
 import SaveToPdfButton from './SaveToPdfButton';

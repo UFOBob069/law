@@ -1,13 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import html2canvas from 'html2canvas';
 import { MealPlanResponse } from '../types';
 import dynamic from 'next/dynamic';
-
-// Dynamically import jsPDF only on client side
-const jsPDF = dynamic(() => import('jspdf').then(mod => mod.jsPDF), {
-  ssr: false
-});
 
 interface SaveToPdfButtonProps {
   mealPlan: MealPlanResponse;
