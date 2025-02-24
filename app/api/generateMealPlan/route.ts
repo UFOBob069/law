@@ -38,6 +38,8 @@ export async function POST(request: Request) {
             - Servings per meal: ${formData.servingsPerMeal}
             - Cooking methods: ${formData.cookingMethods.join(', ')}
             - Dietary preferences: ${formData.dietaryPreferences.join(', ')}
+            - Meal types: ${formData.mealTypes.join(', ')}
+            - Excluded ingredients: ${formData.excludedIngredients.join(', ')}
             - Budget friendly: ${formData.budgetFriendly}
             - Max ingredients per meal: ${formData.maxIngredients}
 

@@ -32,7 +32,8 @@ export type CookingMethod =
   | 'one_pan'
   | 'oven'
   | 'stovetop'
-  | 'no_cook';
+  | 'no_cook'
+  | 'make_ahead';
 
 export type DietaryPreference = 
   | 'chicken'
@@ -42,13 +43,38 @@ export type DietaryPreference =
   | 'vegetarian'
   | 'vegan'
   | 'dairy_free'
-  | 'gluten_free';
+  | 'gluten_free'
+  | 'kid_friendly';
+
+export type MealType =
+  | 'breakfast'
+  | 'lunch'
+  | 'dinner'
+  | 'snack'
+  | 'portable'
+  | 'dessert'
+  | 'side';
+
+export type Allergen =
+  | 'milk'
+  | 'eggs'
+  | 'fish'
+  | 'shellfish'
+  | 'tree_nuts'
+  | 'peanuts'
+  | 'wheat'
+  | 'soy'
+  | 'sesame'
+  | 'coconut'
+  | 'cilantro';
 
 export interface MealPlanFormData {
   numberOfMeals: number | '';
   servingsPerMeal: number | '';
   cookingMethods: CookingMethod[];
   dietaryPreferences: DietaryPreference[];
+  mealTypes: MealType[];
+  excludedIngredients: Allergen[];
   budgetFriendly: boolean;
   maxIngredients: number;
 }

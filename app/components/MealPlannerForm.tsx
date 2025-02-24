@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { CookingMethod, DietaryPreference, MealPlanFormData, MealPlanResponse } from '../types';
+import { CookingMethod, DietaryPreference, MealPlanFormData, MealPlanResponse, MealType, Allergen } from '../types';
 import IngredientRain from './IngredientRain';
 import { RAIN_DURATION } from '../constants';
 import SaveToPdfButton from './SaveToPdfButton';
@@ -22,6 +22,7 @@ const COOKING_METHODS: { value: CookingMethod; label: string }[] = [
   { value: 'oven', label: 'Oven Baked' },
   { value: 'stovetop', label: 'Stovetop Only' },
   { value: 'no_cook', label: 'No-Cook Meals' },
+  { value: 'make_ahead', label: 'Make Ahead' },
 ];
 
 const DIETARY_PREFERENCES: { value: DietaryPreference; label: string }[] = [
@@ -33,14 +34,41 @@ const DIETARY_PREFERENCES: { value: DietaryPreference; label: string }[] = [
   { value: 'vegan', label: 'Vegan' },
   { value: 'dairy_free', label: 'Dairy-Free' },
   { value: 'gluten_free', label: 'Gluten-Free' },
+  { value: 'kid_friendly', label: 'Kid-Friendly' },
+];
+
+const MEAL_TYPES: { value: MealType; label: string }[] = [
+  { value: 'breakfast', label: 'Breakfast' },
+  { value: 'lunch', label: 'Lunch' },
+  { value: 'dinner', label: 'Dinner' },
+  { value: 'snack', label: 'Snack' },
+  { value: 'portable', label: 'Easy to Pack' },
+  { value: 'dessert', label: 'Dessert' },
+  { value: 'side', label: 'Side Dish' },
+];
+
+const ALLERGENS: { value: Allergen; label: string }[] = [
+  { value: 'milk', label: 'Milk' },
+  { value: 'eggs', label: 'Eggs' },
+  { value: 'fish', label: 'Fish' },
+  { value: 'shellfish', label: 'Shellfish' },
+  { value: 'tree_nuts', label: 'Tree Nuts' },
+  { value: 'peanuts', label: 'Peanuts' },
+  { value: 'wheat', label: 'Wheat' },
+  { value: 'soy', label: 'Soy' },
+  { value: 'sesame', label: 'Sesame' },
+  { value: 'coconut', label: 'Coconut' },
+  { value: 'cilantro', label: 'Cilantro' },
 ];
 
 export default function MealPlannerForm() {
   const [formData, setFormData] = useState<MealPlanFormData>({
     numberOfMeals: 1,
     servingsPerMeal: 1,
-    cookingMethods: [] as CookingMethod[],
-    dietaryPreferences: [] as DietaryPreference[],
+    cookingMethods: [],
+    dietaryPreferences: [],
+    mealTypes: [],
+    excludedIngredients: [],
     budgetFriendly: false,
     maxIngredients: 10,
   });
@@ -132,6 +160,24 @@ export default function MealPlannerForm() {
       dietaryPreferences: prev.dietaryPreferences.includes(preference)
         ? prev.dietaryPreferences.filter(p => p !== preference)
         : [...prev.dietaryPreferences, preference]
+    }));
+  };
+
+  const toggleMealType = (type: MealType) => {
+    setFormData(prev => ({
+      ...prev,
+      mealTypes: prev.mealTypes.includes(type)
+        ? prev.mealTypes.filter(t => t !== type)
+        : [...prev.mealTypes, type]
+    }));
+  };
+
+  const toggleAllergen = (allergen: Allergen) => {
+    setFormData(prev => ({
+      ...prev,
+      excludedIngredients: prev.excludedIngredients.includes(allergen)
+        ? prev.excludedIngredients.filter(a => a !== allergen)
+        : [...prev.excludedIngredients, allergen]
     }));
   };
 
@@ -260,6 +306,52 @@ export default function MealPlannerForm() {
                     onClick={() => toggleDietaryPreference(value)}
                     className={`p-3 text-sm rounded-lg border transition-all ${
                       formData.dietaryPreferences.includes(value)
+                        ? 'bg-orange-100 border-orange-500 text-orange-700'
+                        : 'border-gray-300 hover:border-orange-300 hover:bg-orange-50'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Meal Type */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-3">
+                Meal Type
+              </label>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {MEAL_TYPES.map(({ value, label }) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => toggleMealType(value)}
+                    className={`p-3 text-sm rounded-lg border transition-all ${
+                      formData.mealTypes.includes(value)
+                        ? 'bg-orange-100 border-orange-500 text-orange-700'
+                        : 'border-gray-300 hover:border-orange-300 hover:bg-orange-50'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Exclude Ingredients */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-3">
+                Exclude Ingredients (Allergies/Dislikes)
+              </label>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {ALLERGENS.map(({ value, label }) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => toggleAllergen(value)}
+                    className={`p-3 text-sm rounded-lg border transition-all ${
+                      formData.excludedIngredients.includes(value)
                         ? 'bg-orange-100 border-orange-500 text-orange-700'
                         : 'border-gray-300 hover:border-orange-300 hover:bg-orange-50'
                     }`}
