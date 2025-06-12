@@ -1,4 +1,5 @@
 import { StarIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -30,10 +31,6 @@ const testimonials = [
   },
 ]
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function Testimonials() {
   return (
     <div className="bg-gray-50 py-24 sm:py-32">
@@ -56,7 +53,7 @@ export function Testimonials() {
                 <p className="text-lg leading-8 text-gray-600">{testimonial.body}</p>
               </div>
               <div className="mt-6 flex items-center gap-x-4">
-                <img className="h-10 w-10 rounded-full bg-gray-50" src={testimonial.author.imageUrl} alt="" />
+                <Image className="h-10 w-10 rounded-full bg-gray-50" src={testimonial.author.imageUrl} alt="" width={40} height={40} />
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.author.name}</div>
                   <div className="text-sm leading-6 text-gray-600">{testimonial.author.location}</div>

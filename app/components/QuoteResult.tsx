@@ -366,8 +366,8 @@ export default function QuoteResult({ estimatedCost, analysis, details }: QuoteR
           </div>
 
           <p className="text-gray-700">
-            We'll connect you with top-rated local contractors who will contact you to schedule an
-            inspection and provide a detailed quote. You'll be prepared with:
+            We&apos;ll connect you with top-rated local contractors who will contact you to schedule an
+            inspection and provide a detailed quote. You&apos;ll be prepared with:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -414,8 +414,8 @@ export default function QuoteResult({ estimatedCost, analysis, details }: QuoteR
 
           <div className="mt-6 bg-white p-4 rounded-lg border border-blue-100">
             <p className="text-sm text-gray-600 italic">
-              "Our AI-powered quote system helps homeowners save an average of 15-20% on their roofing projects by providing 
-              accurate cost expectations and insider knowledge for contractor negotiations."
+              &ldquo;Our AI-powered quote system helps homeowners save an average of 15-20% on their roofing projects by providing 
+              accurate cost expectations and insider knowledge for contractor negotiations.&rdquo;
             </p>
           </div>
         </div>
