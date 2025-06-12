@@ -34,15 +34,15 @@ export function HeroSection() {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <Link href="#quote-form" className="inline-flex space-x-6">
-              <motion.span
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10"
               >
                 Free Instant Quote
-              </motion.span>
-              <motion.span
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ export function HeroSection() {
               >
                 <span>No Phone Calls Required</span>
                 <span aria-hidden="true">&rarr;</span>
-              </motion.span>
+              </motion.div>
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ export function HeroSection() {
               href="#quote-form"
               className="group relative rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
             >
-              <motion.span
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -82,7 +82,7 @@ export function HeroSection() {
               >
                 Get Your Free Quote
                 <ArrowRightIcon className="ml-2 -mr-0.5 h-5 w-5 inline-block transition-transform group-hover:translate-x-1" />
-              </motion.span>
+              </motion.div>
             </Link>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -147,4 +147,4 @@ export function HeroSection() {
       </div>
     </div>
   )
-} 
+}
