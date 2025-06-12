@@ -3,17 +3,7 @@
 
 import Link from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import { motion, HTMLMotionProps } from 'framer-motion'
 
-type Merge<P, T> = Omit<P, keyof T> & T;
-type MotionDivProps = Merge<HTMLMotionProps<"div">, { className?: string }>;
-
-/**
- * Note: There are some TypeScript errors related to Framer Motion's type definitions
- * and how they interact with className props. These errors don't affect functionality,
- * and we're ignoring them during build using the next.config.ts configuration.
- * The animations work correctly despite these type errors.
- */
 export function HeroSection() {
   return (
     <div className="relative isolate overflow-hidden">
@@ -34,31 +24,17 @@ export function HeroSection() {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <Link href="#quote-form" className="inline-flex space-x-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10"
-              >
+              <span className="rounded-full bg-primary-600/10 px-3 py-1 text-sm font-semibold leading-6 text-primary-600 ring-1 ring-inset ring-primary-600/10 animate-fade-in">
                 Free Instant Quote
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center space-x-2 text-sm font-medium text-gray-600"
-              >
+              </span>
+              <span className="inline-flex items-center space-x-2 text-sm font-medium text-gray-600 animate-fade-in">
                 <span>No Phone Calls Required</span>
                 <span aria-hidden="true">&rarr;</span>
-              </motion.div>
+              </span>
             </Link>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div className="animate-fade-in-up">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Get Your Free <span className="text-primary-600">1-Minute</span> Roof Quote
             </h1>
@@ -67,43 +43,28 @@ export function HeroSection() {
               Our advanced technology analyzes local pricing data to provide accurate quotes 
               and connect you with trusted local roofers.
             </p>
-          </motion.div>
+          </div>
 
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               href="#quote-form"
-              className="group relative rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+              className="group relative rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all duration-200 animate-fade-in-up"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="flex items-center"
-              >
+              <span className="flex items-center">
                 Get Your Free Quote
                 <ArrowRightIcon className="ml-2 -mr-0.5 h-5 w-5 inline-block transition-transform group-hover:translate-x-1" />
-              </motion.div>
+              </span>
             </Link>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-center text-sm text-gray-600"
-            >
+            <div className="flex items-center text-sm text-gray-600 animate-fade-in-up">
               <svg className="mr-2 h-5 w-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               Takes 60 Seconds
-            </motion.div>
+            </div>
           </div>
 
           {/* Trust indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3"
-          >
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 animate-fade-in-up">
             {/* Trust indicator items */}
             <div className="flex items-center text-sm text-gray-600">
               <svg className="mr-2 h-5 w-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,15 +84,10 @@ export function HeroSection() {
               </svg>
               Best Price Guarantee
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32"
-        >
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32 animate-fade-in-scale">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <div className="relative rounded-xl shadow-2xl ring-1 ring-gray-400/10 overflow-hidden">
               <img
@@ -143,8 +99,53 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent" />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInScale {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.5s ease-out;
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.5s ease-out 0.2s both;
+        }
+
+        .animate-fade-in-scale {
+          animation: fadeInScale 0.5s ease-out 0.3s both;
+        }
+      `}</style>
     </div>
   )
 }
