@@ -1,0 +1,72 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions for validation
+    function isValidString(value) {
+      return value is string && value.size() > 0;
+    }
+    
+    function isValidPhone(value) {
+      return value is string && value.size() >= 10;
+    }
+    
+    function isValidEmail(value) {
+      return value is string && 
+        value.matches('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$');
+    }
+    
+    function isValidZipCode(value) {
+      return value is string && value.matches('^[0-9]{5}(-[0-9]{4})?$');
+    }
+    
+    function isValidSurveyData(data) {
+      return data.keys().hasAll([
+        'roofAge', 'squareFootage', 'roofStyle', 'knownDamage', 
+        'urgency', 'firstName', 'lastName', 'email', 'phone',
+        'address', 'city', 'state', 'zipCode'
+      ]) &&
+      isValidString(data.roofAge) &&
+      isValidString(data.squareFootage) &&
+      isValidString(data.roofStyle) &&
+      isValidString(data.knownDamage) &&
+      isValidString(data.urgency) &&
+      isValidString(data.firstName) &&
+      isValidString(data.lastName) &&
+      isValidEmail(data.email) &&
+      isValidPhone(data.phone) &&
+      isValidString(data.address) &&
+      isValidString(data.city) &&
+      isValidString(data.state) &&
+      isValidZipCode(data.zipCode);
+    }
+
+    // Rules for surveys collection
+    match /surveys/{surveyId} {
+      // Allow creating new surveys from the client
+      allow create: if 
+        // Must include all required fields with valid data
+        isValidSurveyData(request.resource.data) &&
+        // Ensure metadata fields are set correctly
+        request.resource.data.createdAt == request.time &&
+        request.resource.data.status == 'new' &&
+        request.resource.data.isContacted == false &&
+        request.resource.data.source == 'website';
+
+      // Only allow reading specific survey by ID if it matches the user's email
+      allow read: if 
+        resource.data.email == request.auth.token.email;
+
+      // Prevent updates and deletes from client
+      allow update, delete: if false;
+    }
+
+    // Rules for admin access (you'll need to implement admin authentication)
+    match /surveys/{surveyId} {
+      // Allow admin users to read all surveys and update status
+      allow read, update: if 
+        request.auth != null &&
+        request.auth.token.isAdmin == true;
+    }
+  }
+} 
