@@ -386,6 +386,26 @@ export function QuoteForm() {
             )}
           </form>
         </div>
+        {/* Testimonials Section */}
+        <div className="mt-12 max-w-2xl mx-auto">
+          <div className="space-y-8">
+            <div className="text-center">
+              <div className="text-yellow-400 text-xl mb-2">⭐⭐⭐⭐⭐</div>
+              <p className="italic text-lg text-gray-800">“I wasn't sure what a roof should cost — this helped me know what to expect and avoid overpaying.”</p>
+              <div className="mt-2 text-sm text-gray-500">— Susan T., Ohio</div>
+            </div>
+            <div className="text-center">
+              <div className="text-yellow-400 text-xl mb-2">⭐⭐⭐⭐⭐</div>
+              <p className="italic text-lg text-gray-800">“It gave me questions to ask contractors that I would've never thought of.”</p>
+              <div className="mt-2 text-sm text-gray-500">— Jordan M., Florida</div>
+            </div>
+            <div className="text-center">
+              <div className="text-yellow-400 text-xl mb-2">⭐⭐⭐⭐⭐</div>
+              <p className="italic text-lg text-gray-800">“I felt way more confident getting quotes once I knew what the average price should be.”</p>
+              <div className="mt-2 text-sm text-gray-500">— Carla R., Arizona</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
