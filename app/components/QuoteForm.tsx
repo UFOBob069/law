@@ -227,6 +227,15 @@ export function QuoteForm() {
 
             {step === 2 && (
               <div className="space-y-6">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    🏠 You&apos;re Almost Done — Get Your Custom Roof Quote Now
+                  </h2>
+                  <p className="mt-4 text-lg leading-8 text-gray-600">
+                    Enter your details to receive your AI-powered estimate and connect with top-rated roofers near you.
+                  </p>
+                </div>
+
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
@@ -255,16 +264,14 @@ export function QuoteForm() {
                       <p className="mt-2 text-sm text-red-600">Last name is required</p>
                     )}
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
                       Email
                     </label>
                     <input
                       type="email"
-                      {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
+                      {...register('email', { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })}
                       className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                     />
                     {errors.email && (
@@ -289,7 +296,7 @@ export function QuoteForm() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Street Address
+                    Address
                   </label>
                   <input
                     type="text"
@@ -297,12 +304,12 @@ export function QuoteForm() {
                     className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                   />
                   {errors.address && (
-                    <p className="mt-2 text-sm text-red-600">Street address is required</p>
+                    <p className="mt-2 text-sm text-red-600">Address is required</p>
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-                  <div className="col-span-2">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+                  <div>
                     <label className="block text-sm font-medium text-gray-700">
                       City
                     </label>
@@ -336,27 +343,27 @@ export function QuoteForm() {
                     </label>
                     <input
                       type="text"
-                      {...register('zipCode', { required: true, pattern: /^\d{5}(-\d{4})?$/ })}
+                      {...register('zipCode', { required: true })}
                       className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                     />
                     {errors.zipCode && (
-                      <p className="mt-2 text-sm text-red-600">Valid ZIP code is required</p>
+                      <p className="mt-2 text-sm text-red-600">ZIP code is required</p>
                     )}
                   </div>
                 </div>
 
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center mt-8">
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="rounded-md bg-gray-100 px-6 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
+                    className="text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Previous
+                    ← Back
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-md bg-primary-600 px-6 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="rounded-md bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center">
@@ -364,10 +371,13 @@ export function QuoteForm() {
                         Getting Quote...
                       </div>
                     ) : (
-                      'Get Your Quote'
+                      '🚀 Get My Instant Quote'
                     )}
                   </button>
                 </div>
+                <p className="text-center text-sm text-gray-500 mt-4">
+                  🔒 Secure & confidential
+                </p>
               </div>
             )}
           </form>
