@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { PhotoIcon } from '@heroicons/react/24/solid'
 import { LoadingSpinner } from './LoadingSpinner'
 import QuoteResult from './QuoteResult'
 import { saveSurveyResponse, type SurveyData } from '@/lib/services/survey'
@@ -99,10 +98,10 @@ export function QuoteForm() {
       <div className="w-full max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Get Your Free Roof Quote
+            🏠 Get Your Roof Estimate — Takes 60 Seconds
           </h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            Fill out this quick form to receive your instant, AI-powered estimate.
+            Answer a few questions to receive your free quote instantly.
           </p>
         </div>
         
@@ -133,7 +132,7 @@ export function QuoteForm() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    What is your roof's approximate square footage?
+                    What is your roof&apos;s approximate square footage?
                   </label>
                   <select
                     {...register('squareFootage', { required: true })}
