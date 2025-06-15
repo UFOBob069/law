@@ -104,6 +104,9 @@ export function QuoteForm() {
             <p className="mt-4 text-lg leading-8 text-gray-600">
               Answer a few questions to receive your free quote instantly.
             </p>
+            <p className="mt-2 text-sm text-gray-500">
+              🔒 Trusted by 10,000+ homeowners
+            </p>
           </div>
         )}
         <div className="bg-white shadow-xl rounded-lg p-8">
