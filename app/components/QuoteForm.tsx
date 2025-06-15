@@ -96,15 +96,16 @@ export function QuoteForm() {
   return (
     <section id="quote-form" className="py-24 bg-gray-50">
       <div className="w-full max-w-4xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            🏠 Get Your Roof Estimate — Takes 60 Seconds
-          </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            Answer a few questions to receive your free quote instantly.
-          </p>
-        </div>
-        
+        {step === 1 && (
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              🏠 Get Your Roof Estimate — Takes 60 Seconds
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600">
+              Answer a few questions to receive your free quote instantly.
+            </p>
+          </div>
+        )}
         <div className="bg-white shadow-xl rounded-lg p-8">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             {step === 1 && (
