@@ -254,21 +254,6 @@ export function QuoteForm() {
                       <p className="mt-2 text-sm text-red-600">First name is required</p>
                     )}
                   </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      {...register('lastName', { required: true })}
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                    {errors.lastName && (
-                      <p className="mt-2 text-sm text-red-600">Last name is required</p>
-                    )}
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
                       Email
@@ -282,7 +267,6 @@ export function QuoteForm() {
                       <p className="mt-2 text-sm text-red-600">Valid email is required</p>
                     )}
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
                       Phone
@@ -296,51 +280,6 @@ export function QuoteForm() {
                       <p className="mt-2 text-sm text-red-600">Phone number is required</p>
                     )}
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Address
-                  </label>
-                  <input
-                    type="text"
-                    {...register('address', { required: true })}
-                    className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                  />
-                  {errors.address && (
-                    <p className="mt-2 text-sm text-red-600">Address is required</p>
-                  )}
-                </div>
-
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      {...register('city', { required: true })}
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                    {errors.city && (
-                      <p className="mt-2 text-sm text-red-600">City is required</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      State
-                    </label>
-                    <input
-                      type="text"
-                      {...register('state', { required: true })}
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                    {errors.state && (
-                      <p className="mt-2 text-sm text-red-600">State is required</p>
-                    )}
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
                       ZIP Code
