@@ -6,57 +6,71 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Get Your Free 1-Minute Roof Quote — No Calls Required | 1MinRoofQuote",
-    template: "%s | 1MinRoofQuote"
+    default: "Injured in an Accident? Get the Help You Deserve—Fast | Central Texas Hurt",
+    template: "%s | Central Texas Hurt"
   },
-  description: "Get an instant, AI-powered roof quote in just 60 seconds. No phone calls required. Connect with trusted local roofers and get your free estimate today.",
+  description:
+    "Injured in a car accident, slip and fall, or workplace accident in Central Texas? Local personal injury lawyers serving Austin, Waco, San Marcos, Round Rock, Georgetown, Cedar Park, Kyle, Buda, and New Braunfels. Free consultation. No win, no fee. Call 512-543-7777.",
   keywords: [
-    "roof quote",
-    "roofing estimate",
-    "instant roof quote",
-    "AI roof quote",
-    "free roof estimate",
-    "roof replacement cost",
-    "roof repair quote",
-    "local roofers",
-    "roofing calculator",
-    "roof cost estimate"
+    "personal injury lawyer",
+    "personal injury attorney",
+    "car accident lawyer",
+    "slip and fall lawyer",
+    "workplace injury lawyer",
+    "Central Texas injury attorney",
+    "Austin personal injury",
+    "Waco injury lawyer",
+    "San Marcos accident attorney",
+    "Round Rock personal injury",
+    "Georgetown personal injury",
+    "Cedar Park injury lawyer",
+    "Kyle injury lawyer",
+    "Buda injury lawyer",
+    "New Braunfels injury lawyer",
+    "no win no fee",
+    "free consultation",
+    "24/7 response",
+    "millions recovered",
+    "injury compensation",
+    "accident claims"
   ],
-  authors: [{ name: "1MinRoofQuote" }],
-  creator: "1MinRoofQuote",
-  publisher: "1MinRoofQuote",
+  authors: [{ name: "Central Texas Hurt" }],
+  creator: "Central Texas Hurt",
+  publisher: "Central Texas Hurt",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://1minroofquote.com'),
+  metadataBase: new URL('https://centraltexashurt.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Get Your Free 1-Minute Roof Quote — No Calls Required',
-    description: 'Get an instant, AI-powered roof quote in just 60 seconds. No phone calls required. Connect with trusted local roofers and get your free estimate today.',
-    url: 'https://1minroofquote.com',
-    siteName: '1MinRoofQuote',
+    title: 'Injured in an Accident? Get the Help You Deserve—Fast',
+    description:
+      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call 512-543-7777.',
+    url: 'https://centraltexashurt.com',
+    siteName: 'Central Texas Hurt',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/hero-roof.jpg',
         width: 1200,
         height: 630,
-        alt: '1MinRoofQuote - Instant AI-Powered Roof Quotes',
-      }
+        alt: 'Central Texas Hurt — Personal Injury Lawyers in Central Texas',
+      },
     ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Get Your Free 1-Minute Roof Quote — No Calls Required',
-    description: 'Get an instant, AI-powered roof quote in just 60 seconds. No phone calls required. Connect with trusted local roofers.',
-    images: ['/twitter-image.jpg'],
-    creator: '@1MinRoofQuote',
-    site: '@1MinRoofQuote',
+    title: 'Injured in an Accident? Get the Help You Deserve—Fast',
+    description:
+      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call 512-543-7777.',
+    images: ['/hero-roof.jpg'],
+    creator: '@CentralTexasHurt',
+    site: '@CentralTexasHurt',
   },
   robots: {
     index: true,
@@ -70,29 +84,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
-    ],
+    icon: [{ url: '/favicon.ico' }],
     shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
-        color: '#1E40AF', // Blue color matching our theme
-      },
-    ],
   },
   manifest: '/site.webmanifest',
-  verification: {
-    google: 'your-google-site-verification',
-  },
-  category: 'technology',
+  category: 'legal',
 };
 
 export default function RootLayout({
@@ -103,12 +99,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full bg-white">
       <head>
-        <meta name="theme-color" content="#1E40AF" />
+        <meta name="theme-color" content="#DC2626" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#1E40AF" />
+        <meta name="msapplication-TileColor" content="#DC2626" />
         <meta name="msapplication-tap-highlight" content="no" />
       </head>
       <body className={`${inter.className} h-full`}>{children}</body>

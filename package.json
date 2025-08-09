@@ -1,8 +1,8 @@
 {
-  "name": "1minroof",
+  "name": "centraltexashurt",
   "version": "0.1.0",
   "private": true,
-  "description": "Instant AI-powered roofing quotes calculator",
+  "description": "Central Texas Hurt - Personal Injury Law Firm Landing Page",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

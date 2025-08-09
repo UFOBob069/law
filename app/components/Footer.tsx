@@ -1,9 +1,10 @@
 const navigation = {
   main: [
     { name: 'About Us', href: '#' },
+    { name: 'Practice Areas', href: '#' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Service', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Contact', href: 'tel:512-543-7777' },
   ],
   social: [
     {
@@ -33,12 +34,59 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+        {/* Contact Information */}
+        <div className="text-center mb-12">
+          <h3 className="text-2xl font-bold mb-4">Central Texas Hurt</h3>
+          <p className="text-lg mb-4">Personal Injury Lawyers</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:512-543-7777"
+              className="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:bg-red-500 transition-colors"
+            >
+              Call 512-543-7777
+            </a>
+            <p className="text-gray-300">Available 24/7 for Emergency Cases</p>
+          </div>
+        </div>
+
+        {/* Practice Areas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Practice Areas</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>Car Accidents</li>
+              <li>Slip & Fall</li>
+              <li>Workplace Injuries</li>
+              <li>Medical Malpractice</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Areas We Serve</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>Austin</li>
+              <li>Waco</li>
+              <li>San Marcos</li>
+              <li>Round Rock</li>
+              <li>Georgetown</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>No Win, No Fee</li>
+              <li>Free Consultation</li>
+              <li>Local Expertise</li>
+              <li>24/7 Response</li>
+            </ul>
+          </div>
+        </div>
+
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
-              <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+              <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
                 {item.name}
               </a>
             </div>
@@ -47,7 +95,7 @@ export function Footer() {
 
         <div className="mt-10 flex justify-center space-x-10">
           {navigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
@@ -55,12 +103,16 @@ export function Footer() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-xs leading-5 text-gray-500">
-            &copy; {new Date().getFullYear()} 1MinRoofQuote. All rights reserved.
+          <p className="text-xs leading-5 text-gray-400">
+            &copy; {new Date().getFullYear()} Central Texas Hurt. All rights reserved.
           </p>
-          <p className="mt-4 text-xs leading-5 text-gray-500 max-w-2xl mx-auto">
-            Disclaimer: Quotes provided are estimates based on available data and may vary. Final pricing will be determined after professional inspection. 
-            Not all contractors are available in all areas. By submitting your information, you agree to be contacted by local roofing professionals.
+          <p className="mt-4 text-xs leading-5 text-gray-400 max-w-4xl mx-auto">
+            Disclaimer: The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. 
+            This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship. 
+            Past results do not guarantee future outcomes. Each case is unique and results depend on the specific facts and circumstances.
+          </p>
+          <p className="mt-2 text-xs leading-5 text-gray-400">
+            Attorney Advertising. This website is designed for general information only.
           </p>
         </div>
       </div>

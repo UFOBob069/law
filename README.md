@@ -1,91 +1,122 @@
-# 1MinRoofQuote - Instant Roofing Quotes
+# Central Texas Hurt - Personal Injury Law Firm
 
-A modern, high-converting landing page for getting instant roof quotes. Built with Next.js, React, and Tailwind CSS.
+A high-converting, mobile-friendly lead generation landing page for Central Texas Hurt, a personal injury law firm serving Central Texas.
 
-## Features
+## 🎯 Page Goal
 
-- ⚡ Instant AI-powered roof quotes using GPT-4
-- 📱 Mobile-first responsive design with Tailwind CSS
-- 🖼️ Optional roof photo upload
-- 🏠 Multi-step intelligent quote form
-- 🔒 Privacy-focused lead capture
-- 💫 Modern UI with smooth animations
-- 🤖 OpenAI integration for accurate estimates
-- 📊 Detailed cost breakdowns
-- 📍 Location-aware pricing
-- 🏗️ Multiple roof type support
+Capture leads from paid social ads (TikTok, Instagram, Facebook) via form submissions or phone calls.
 
-## Tech Stack
+## 🏢 Branding
 
-- Next.js 15.1
-- React 19
-- Tailwind CSS 3.4
-- TypeScript 5
-- React Hook Form 7.57
-- Headless UI 2.2
-- OpenAI API (GPT-4)
+- **Name**: Central Texas Hurt
+- **Target Audience**: People recently injured in car accidents, slip and falls, workplace accidents, etc.
+- **Geographic Focus**: Central Texas – Austin, Waco, San Marcos, etc.
 
-## Getting Started
+## ✨ Key Features
 
-1. Clone the repository:
+### Must-Have Elements
+- **Headline**: "Injured in an Accident? Get the Help You Deserve—Fast."
+- **Subheadline**: Builds trust and confirms geographic targeting
+- **Primary CTA**: Large clickable phone number (512-543-7777)
+- **Form Fields**:
+  - Name
+  - Phone Number
+  - Brief Description of Injury
+  - Preferred Contact Method (Call/Text)
+  - City
+  - Accident Type
+
+### Trust Indicators
+- "No win, no fee"
+- "Free consultation"
+- "Millions recovered for Texans"
+- Google Reviews, AVVO ratings
+- Board certification badges
+
+### Urgency Section
+- Emphasizes time-sensitive nature of legal claims
+- Texas statute of limitations information
+
+## 🎨 Design Principles
+
+- **Mobile-First**: Optimized for mobile devices
+- **Clean & Fast**: Minimal design for high conversion
+- **Modern Typography**: Readable fonts
+- **Strong CTAs**: Red/dark blue contrasting buttons
+- **White Space**: Focus on CTAs, avoid clutter
+
+## 📱 Mobile Optimization
+
+- **Thumb Zone**: CTAs positioned where thumbs naturally rest
+- **Reading Level**: Grade 6, simple sentences
+- **Progressive Profiling**: 5-field form maximum
+- **Objection Preemption**: Address top 3 concerns in FAQ
+
+## 🚀 Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables**:
+   Create a `.env.local` file with your Firebase configuration:
+   ```
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS
+- **Forms**: React Hook Form
+- **Database**: Firebase Firestore
+- **Icons**: Heroicons
+- **UI Components**: Headless UI
+
+## 📊 Conversion Optimization
+
+- **4-U Formula Headlines**: Useful, Unique, Urgent, Ultra-specific
+- **Above-Fold Value Proposition**: Customer problem focus, zero scroll required
+- **First-Person CTAs**: "Get MY guide" vs "Get YOUR guide"
+- **Micro-Commitment Ladder**: Small yes leads to big yes
+- **Benefit-First Language**: Features tell, benefits sell
+
+## 📞 Contact Information
+
+- **Phone**: 512-543-7777
+- **Service Areas**: Austin, Waco, San Marcos, Round Rock, Georgetown, Cedar Park, Kyle, Buda, New Braunfels
+- **Practice Areas**: Car Accidents, Slip & Fall, Workplace Injuries, Medical Malpractice
+
+## 📄 Legal Disclaimers
+
+- Attorney Advertising
+- Past results do not guarantee future outcomes
+- Free consultation, no win no fee
+- Information is for general purposes only and does not constitute legal advice
+
+## 🚀 Deployment
+
+The site is optimized for deployment on Vercel, Netlify, or any static hosting platform.
+
 ```bash
-git clone https://github.com/yourusername/1minroof.git
-cd 1minroof
+npm run build
+npm start
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+---
 
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Project Structure
-
-```
-1minroof/
-├── app/
-│   ├── components/
-│   │   ├── Benefits.tsx
-│   │   ├── FAQ.tsx
-│   │   ├── Footer.tsx
-│   │   ├── HeroSection.tsx
-│   │   ├── QuoteForm.tsx
-│   │   └── Testimonials.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── public/
-│   └── images/
-├── tailwind.config.ts
-└── package.json
-```
-
-## Development
-
-- Run `npm run dev` for development
-- Run `npm run build` for production build
-- Run `npm run start` to start production server
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For support or inquiries about 1MinRoofQuote, please visit our website or reach out through our contact form.
-
-Project Link: [https://1minroof.com](https://1minroof.com)
+Built with ❤️ for Central Texas injury victims seeking justice and compensation.

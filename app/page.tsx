@@ -1,6 +1,6 @@
 import { HeroSection } from './components/HeroSection'
-import { Benefits } from './components/Benefits'
-import { QuoteForm } from './components/QuoteForm'
+import { TrustIndicators } from './components/TrustIndicators'
+import { InjuryForm } from './components/InjuryForm'
 import { Testimonials } from './components/Testimonials'
 import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className="min-h-full">
       <HeroSection />
-      <Benefits />
+      <TrustIndicators />
+      <InjuryForm />
       <Testimonials />
-      <QuoteForm />
       <FAQ />
       <Footer />
     </main>
