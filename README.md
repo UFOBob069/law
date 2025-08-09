@@ -17,7 +17,7 @@ Capture leads from paid social ads (TikTok, Instagram, Facebook) via form submis
 ### Must-Have Elements
 - **Headline**: "Injured in an Accident? Get the Help You Deserve—Fast."
 - **Subheadline**: Builds trust and confirms geographic targeting
-- **Primary CTA**: Large clickable phone number (512-543-7777)
+- **Primary CTA**: Large clickable phone number ((512) 859 7776)
 - **Form Fields**:
   - Name
   - Phone Number
@@ -97,7 +97,7 @@ Capture leads from paid social ads (TikTok, Instagram, Facebook) via form submis
 
 ## 📞 Contact Information
 
-- **Phone**: 512-543-7777
+- **Phone**: (512) 859 7776
 - **Service Areas**: Austin, Waco, San Marcos, Round Rock, Georgetown, Cedar Park, Kyle, Buda, New Braunfels
 - **Practice Areas**: Car Accidents, Slip & Fall, Workplace Injuries, Medical Malpractice
 

@@ -40,14 +40,14 @@ export function InjuryForm() {
       
       if (!result.success) {
         console.error('Failed to save to Firebase:', result.error)
-        alert('An error occurred. Please try again or call us directly at 512-543-7777')
+        alert('An error occurred. Please try again or call us directly at (512) 859 7776')
         return
       }
 
       setIsSubmitted(true)
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('An error occurred. Please try again or call us directly at 512-543-7777')
+      alert('An error occurred. Please try again or call us directly at (512) 859 7776')
     } finally {
       setIsSubmitting(false)
     }
@@ -79,11 +79,11 @@ export function InjuryForm() {
                 Call us right now for immediate assistance:
               </p>
               <a
-                href="tel:512-543-7777"
+                href="tel:+15128597776"
                 className="inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-3 text-lg font-semibold text-white shadow-lg hover:bg-red-500 transition-colors"
               >
                 <PhoneIcon className="mr-2 h-5 w-5" />
-                Call 512-543-7777 NOW
+                Call (512) 859 7776 NOW
               </a>
             </div>
             <button
@@ -162,7 +162,7 @@ export function InjuryForm() {
                   }
                 })}
                 className="mt-2 block w-full rounded-md border-0 py-3 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
-                placeholder="(512) 543-7777"
+                placeholder="(512) 859 7776"
               />
               {errors.phone && (
                 <p className="mt-2 text-sm text-red-600">{errors.phone.message}</p>
@@ -285,12 +285,12 @@ export function InjuryForm() {
               </button>
               
               <a
-                href="tel:512-543-7777"
+                href="tel:+15128597776"
                 className="w-full sm:w-auto rounded-full bg-gray-900 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 transition-all duration-200"
               >
                 <span className="flex items-center justify-center">
                   <PhoneIcon className="mr-2 h-5 w-5" />
-                  Call 512-543-7777
+                  Call (512) 859 7776
                 </span>
               </a>
             </div>

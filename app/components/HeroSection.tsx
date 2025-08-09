@@ -46,12 +46,12 @@ export function HeroSection() {
           {/* Primary CTA - Phone Number */}
           <div className="mt-10 flex flex-col gap-4">
             <a
-              href="tel:512-543-7777"
+              href="tel:+15128597776"
               className="group relative rounded-full bg-red-600 px-8 py-4 text-xl font-bold text-white shadow-lg hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 transition-all duration-200 animate-fade-in-up"
             >
               <span className="flex items-center justify-center">
                 <PhoneIcon className="mr-3 h-6 w-6" />
-                Call 512-543-7777 NOW
+                Call (512) 859 7776 NOW
                 <ArrowRightIcon className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </span>
             </a>
@@ -102,7 +102,7 @@ export function HeroSection() {
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <div className="relative rounded-xl shadow-2xl ring-1 ring-gray-400/10 overflow-hidden">
               <img
-                src="/hero-injury.jpg"
+                src="/hero-injury.png"
                 alt="Personal injury lawyer helping client"
                 className="w-[76rem] rounded-xl bg-gray-50 object-cover"
               />

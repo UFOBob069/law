@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Central Texas Hurt"
   },
   description:
-    "Injured in a car accident, slip and fall, or workplace accident in Central Texas? Local personal injury lawyers serving Austin, Waco, San Marcos, Round Rock, Georgetown, Cedar Park, Kyle, Buda, and New Braunfels. Free consultation. No win, no fee. Call 512-543-7777.",
+    "Injured in a car accident, slip and fall, or workplace accident in Central Texas? Local personal injury lawyers serving Austin, Waco, San Marcos, Round Rock, Georgetown, Cedar Park, Kyle, Buda, and New Braunfels. Free consultation. No win, no fee. Call (512) 859 7776.",
   keywords: [
     "personal injury lawyer",
     "personal injury attorney",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Injured in an Accident? Get the Help You Deserve—Fast',
     description:
-      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call 512-543-7777.',
+      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call (512) 859 7776.',
     url: 'https://centraltexashurt.com',
     siteName: 'Central Texas Hurt',
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Injured in an Accident? Get the Help You Deserve—Fast',
     description:
-      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call 512-543-7777.',
+      'Local personal injury lawyers serving Central Texas. Free consultation. No win, no fee. Call (512) 859 7776.',
     images: ['/hero-roof.jpg'],
     creator: '@CentralTexasHurt',
     site: '@CentralTexasHurt',

@@ -77,10 +77,10 @@ export function Testimonials() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:512-543-7777"
+                href="tel:+15128597776"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-lg font-semibold text-red-600 shadow-lg hover:bg-gray-100 transition-colors"
               >
-                Call 512-543-7777 NOW
+                Call (512) 859 7776 NOW
               </a>
               <a
                 href="#injury-form"

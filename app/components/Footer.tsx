@@ -4,7 +4,7 @@ const navigation = {
     { name: 'Practice Areas', href: '#' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Service', href: '#' },
-    { name: 'Contact', href: 'tel:512-543-7777' },
+    { name: 'Contact', href: 'tel:+15128597776' },
   ],
   social: [
     {
@@ -42,10 +42,10 @@ export function Footer() {
           <p className="text-lg mb-4">Personal Injury Lawyers</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:512-543-7777"
+              href="tel:+15128597776"
               className="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:bg-red-500 transition-colors"
             >
-              Call 512-543-7777
+              Call (512) 859 7776
             </a>
             <p className="text-gray-300">Available 24/7 for Emergency Cases</p>
           </div>
