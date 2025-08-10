@@ -109,7 +109,7 @@ export function InjuryForm() {
             Tell us about your injury and we'll get back to you within 24 hours.
           </p>
           <p className="mt-2 text-sm text-gray-500">
-            🔒 Your information is confidential and secure
+            🔒 Your information is confidential and secure • Se Habla Español
           </p>
         </div>
         

@@ -79,6 +79,7 @@ export function Footer() {
               <li>Free Consultation</li>
               <li>Local Expertise</li>
               <li>24/7 Response</li>
+              <li>Se Habla Español</li>
             </ul>
           </div>
         </div>

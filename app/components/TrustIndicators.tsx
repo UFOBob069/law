@@ -65,6 +65,19 @@ export function TrustIndicators() {
               Available when you need us most
             </p>
           </div>
+
+          {/* Trust Badge 5 - Spanish Language */}
+          <div className="flex flex-col items-center text-center">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-4">
+              <svg className="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900">Se Habla Español</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              We speak Spanish fluently
+            </p>
+          </div>
         </div>
 
         {/* Awards and Recognition */}
